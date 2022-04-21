@@ -1,0 +1,181 @@
+<html>
+    <head>
+        <title>home</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+            </script>
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: blueviolet;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+#container {height: 5%; width:100%;}
+#left, #middle, #right {display: inline-block; *display: inline; zoom: 1; vertical-align: top; background-color: azure;}
+#left {width: 25%; }
+#middle {width: 25%; }
+#right {width: 25%; }
+</style>
+    </head>
+    <body>
+        <h2 style="text-align: center;">WELCOME TO GREAT LEARNING</h2>
+        <img src="data:image/png;base64,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"/>
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 3</div>
+              <img src="https://d1vwxdpzbgdqj.cloudfront.net/s3-public-images/learning-partners/great-lakes-6.png" style="width:100%">
+              <div class="text">Caption Text</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div>
+              <img src="https://d1vwxdpzbgdqj.cloudfront.net/s3-public-images/learning-partners/shiv-nadar-university.png" style="width:100%">
+              <div class="text">Caption Two</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 3</div>
+              <img src="https://d1vwxdpzbgdqj.cloudfront.net/s3-public-images/learning-partners/northwestern-university-6.png" style="width:100%">
+              <div class="text">Caption Three</div>
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+        <div id="container" >
+           <div id="left"> <a href="home.html">HOME</a></div>
+            <div id="middle"><a href="profile.html">PROFILE</a></div>
+           <div id="right"> <a href="Mentor.html" target="_blank">MENTOR</a></div>
+           <input type="text" placeholder="Search..">
+        </div>
+        <div><br>    
+           <a href="https://www.mygreatlearning.com/" target="_blank"><button >KNOW MORE</buton></a>
+           </div><br>
+        <a href="login.html" target="_blank">LOGIN</a><br><br>
+        <a href="Register.html" target="_blank">REGISTER</a><br><br>
+        <a href="courses.html" target="_blank">COURSES</a><br>
+
+    </body>
+</html>
+
+
